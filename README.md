@@ -1,10 +1,10 @@
 # Food Product Explorer
 
-A modern React + TypeScript marketplace app for exploring food and consumer products from the DummyJSON API. The app includes a responsive product grid, search, category filtering, sorting, loading and error states, and a dedicated product details view.
+A modern React + TypeScript grocery and food marketplace app built with DummyJSON data. The app focuses on food and grocery products, uses Indian Rupees for pricing, and includes a responsive product grid, search, category filtering, sorting, loading and error states, and a dedicated product details view.
 
 ## 1. Project overview
 
-Food Product Explorer is a frontend app designed to help users browse a catalog of products, narrow results by title or category, and view detailed information for individual items. The application loads product data from DummyJSON and keeps the UI clean, modern, and responsive across desktop, tablet, and mobile devices.
+Food Product Explorer is a frontend app designed to help users browse a curated food and grocery catalog, narrow results by title or category, and view detailed information for individual items. The application loads product data from DummyJSON and keeps the UI clean, modern, and responsive across desktop, tablet, and mobile devices.
 
 ## 2. Technologies used
 
@@ -14,28 +14,30 @@ Food Product Explorer is a frontend app designed to help users browse a catalog 
 - React Router
 - CSS
 - DummyJSON REST API
+- Indian Rupee formatting for local pricing
 
 ## 3. Features
 
-- Responsive product listing page
+- Food and grocery-only product listing
 - Search by title with case-insensitive matching
 - Category filtering generated from the fetched data
 - Sorting by default, price, rating, and name
-- Product cards with ratings, pricing, stock status, and discount badges
+- Product cards with ratings, INR pricing, stock status, and discount badges
 - Loading skeletons and retryable error handling
 - Empty state handling when no products match the search or filters
 - Product details page for each item
 - Invalid or missing product ID handling
 - Clean navigation and footer layout
+- Currency displayed in Indian Rupees (₹)
 
 ## 4. API details
 
-The app fetches product data from DummyJSON:
+The app fetches food and grocery product data from DummyJSON:
 
 - Products list: https://dummyjson.com/products?limit=0
 - Single product: https://dummyjson.com/products/{id}
 
-These requests are handled in the service layer, with proper error handling for failed fetches and 404 responses.
+The storefront filters the dataset to food and grocery categories before display. Prices are formatted in Indian Rupees (₹), and requests are handled in the service layer with proper error handling for failed fetches and 404 responses.
 
 ## 5. How to run the application
 
@@ -98,9 +100,10 @@ Search is performed client-side after fetching the full product list once from D
 
 ## 10. Filtering approach
 
-- Category options are generated from the current product list rather than hardcoded.
+- Category options are generated from the current food and grocery product list rather than hardcoded.
 - Filtering combines the selected category with the typed search term.
 - The app supports clearing filters from the toolbar or empty state button.
+- Only food and grocery items are shown in the storefront to keep the catalog focused on the requested product type.
 
 ## 11. Known limitations
 
@@ -116,6 +119,7 @@ Search is performed client-side after fetching the full product list once from D
 - Mobile-friendly stacked layout
 - Retry support when the product fetch fails
 - Responsive detail page with product metrics and back navigation
+- INR pricing and food/grocery-first storefront design
 
 ## 13. Search and filtering summary
 
@@ -130,5 +134,5 @@ npm run dev
 
 ## 15. Notes
 
-This project intentionally avoids hardcoded product data and uses the live DummyJSON API as required by the specification.
+This project intentionally avoids hardcoded product data and uses the live DummyJSON API as required by the specification. The storefront is currently scoped to food and grocery products, and all prices are displayed in Indian Rupees (₹) for a local market-focused shopping experience.
 

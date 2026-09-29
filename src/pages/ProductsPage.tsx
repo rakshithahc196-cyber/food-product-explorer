@@ -78,14 +78,14 @@ function ProductsPage() {
     <section className="products-page">
       <div className="page-topbar">
         <div>
-          <p className="eyebrow">Marketplace</p>
+          <p className="eyebrow">Fresh picks</p>
           <h1>Explore Food &amp; Groceries</h1>
         </div>
         <span className="result-count">{filteredProducts.length} items</span>
       </div>
 
       <p className="page-subtitle">
-        Fresh food essentials and grocery favourites for everyday living.
+        Daily essentials, pantry staples, and fresh groceries delivered for home living.
       </p>
 
       <div className="toolbar">

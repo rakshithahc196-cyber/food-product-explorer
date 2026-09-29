@@ -4,11 +4,11 @@ function Header() {
   return (
     <header className="site-header">
       <div className="brand-wrap">
-        <Link className="brand" to="/products" aria-label="Food Product Explorer home">
+        <Link className="brand" to="/products" aria-label="Fresh Basket home">
           <span className="brand-mark" aria-hidden="true">
-            🍽️
+            🛒
           </span>
-          <span>Food Product Explorer</span>
+          <span>Fresh Basket</span>
         </Link>
       </div>
 
@@ -17,7 +17,7 @@ function Header() {
           to="/products"
           className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
         >
-          Products
+          Shop
         </NavLink>
         <NavLink
           to="/about"
